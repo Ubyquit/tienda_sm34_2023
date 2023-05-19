@@ -35,6 +35,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nombre fabricante</th>
+                    <th scope="col">Productos</th>
                     <th scope="col">Eliminar</th>
                     <th scope="col">Actualizar</th>
                 </tr>
@@ -43,7 +44,10 @@
                 <?php
                 include('connection/connection.php');
 
-                $consulta = "SELECT * FROM fabricante";
+                $consulta = "SELECT count(id_producto) AS contador , fabricante.nombre AS nombre, id_fabricante
+                FROM producto RIGHT JOIN fabricante
+                ON producto.id_fabricante_id = fabricante.id_fabricante
+                GROUP BY id_fabricante";
                 $resultado = mysqli_query($conn, $consulta);
 
                 while ($fila = mysqli_fetch_array($resultado)) {
@@ -54,6 +58,9 @@
                         </th>
                         <td>
                             <?php echo $fila['nombre'] ?>
+                        </td>
+                        <td>
+                            <?php echo $fila['contador'] ?>
                         </td>
                         <td>
                             <a href="delete/eliminar_fabricante.php?id_fabricante=<?php echo $fila['id_fabricante'] ?>">
