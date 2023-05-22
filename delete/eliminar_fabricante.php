@@ -5,7 +5,8 @@
 
     include('../connection/connection.php');
 
-    $consulta = "DELETE FROM fabricante WHERE id_fabricante = '$id_fabricante'";
+    $consulta = "CALL p_eliminarFabricante($id_fabricante)";
+    //$consulta = "DELETE FROM fabricante WHERE id_fabricante = '$id_fabricante'";
 
     $resultado = mysqli_query($conn, $consulta);
 

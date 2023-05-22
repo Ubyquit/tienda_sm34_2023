@@ -64,13 +64,7 @@
                 <?php
                 include('connection/connection.php');
                 $c = 1;
-                $consulta = "SELECT 
-                id_producto,
-                producto.nombre,
-                precio,
-                fabricante.nombre AS fabricante
-                FROM producto INNER JOIN fabricante
-                ON producto.id_fabricante_id = fabricante.id_fabricante;";
+                $consulta = "call p_verProductos();";
 
                 $query = mysqli_query($conn, $consulta);
 

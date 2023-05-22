@@ -44,10 +44,7 @@
                 <?php
                 include('connection/connection.php');
 
-                $consulta = "SELECT count(id_producto) AS contador , fabricante.nombre AS nombre, id_fabricante
-                FROM producto RIGHT JOIN fabricante
-                ON producto.id_fabricante_id = fabricante.id_fabricante
-                GROUP BY id_fabricante";
+                $consulta = "CALL p_verFabricantes()";
                 $resultado = mysqli_query($conn, $consulta);
 
                 while ($fila = mysqli_fetch_array($resultado)) {
