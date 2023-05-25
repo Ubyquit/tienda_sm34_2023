@@ -17,6 +17,8 @@
 <body>
     <header>
         <!-- place navbar here -->
+        <?php include('partials/nav.html') ?>
+
     </header>
     <main>
         <!-- ========== Start formulario ========== -->

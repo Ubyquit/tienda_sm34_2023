@@ -17,6 +17,7 @@
 <body>
     <header>
         <!-- place navbar here -->
+        <?php include('partials/nav.html') ?>
     </header>
     <main>
 
@@ -57,7 +58,17 @@
                             <?php echo $fila['nombre'] ?>
                         </td>
                         <td>
-                            <?php echo $fila['contador'] ?>
+                            
+                            <?php 
+                            
+                            if($fila['contador'] != 0){
+                                echo '<span class="badge text-bg-success">'.$fila['contador'].'</span>';
+                            }else{
+                                echo '<span class="badge text-bg-danger">'.$fila['contador'].'</span>';
+                            }
+
+                             ?>
+                            
                         </td>
                         <td>
                             <a href="delete/eliminar_fabricante.php?id_fabricante=<?php echo $fila['id_fabricante'] ?>">
