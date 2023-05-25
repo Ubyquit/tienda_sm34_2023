@@ -36,39 +36,47 @@ $fabricante = mysqli_fetch_array($resultado1);
         <!-- place navbar here -->
     </header>
     <main>
-
-        <!-- ========== Start formulario ========== -->
-        <form action="actualizar_producto.php" method="post">
-            <div class="mb-3">
-                <label class="form-label">Producto</label>
-                <input name="nombre_producto" value="<?php echo $fabricante['nombre'] ?>" type="text"
-                    class="form-control" required>
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="card w-50">
+                <div class="card-header">
+                    Actualizar producto
+                </div>
+                <div class="card-body">
+                    <!-- ========== Start formulario ========== -->
+                    <form action="actualizar_producto.php" method="post">
+                        <div class="mb-4">
+                            <label class="form-label">Producto</label>
+                            <input name="nombre_producto" value="<?php echo $fabricante['nombre'] ?>" type="text"
+                                class="form-control" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Precio</label>
+                            <input name="precio_producto" value="<?php echo $fabricante['precio'] ?>" type="number"
+                                class="form-control" min="0" max="9999" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Fabricante</label>
+                            <select name="id_fabricante" class="form-select">
+                                <option value="<?php echo $fabricante['id_fabricante_id']; ?>" selected><?php echo $fabricante['fabricante'] ?></option>
+                                <?php
+                                while ($fila = mysqli_fetch_array($resultado)) {
+                                    ?>
+                                    <option value="<?php echo $fila['id_fabricante']; ?>"><?php echo $fila['nombre']; ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div>
+                            <input name="id_producto" value="<?php echo $id_producto; ?>" type="hidden">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <!-- ========== End formulario ========== -->
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">Precio</label>
-                <input name="precio_producto" value="<?php echo $fabricante['precio'] ?>" type="number"  class="form-control" min="0" max="9999" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Fabricante</label>
-                <select name="id_fabricante" class="form-select">
-                    <option value="<?php echo $fabricante['id_fabricante_id']; ?>" selected><?php echo $fabricante['fabricante'] ?></option>
-                    <?php
-                    while ($fila = mysqli_fetch_array($resultado)) {
-                        ?>
-                        <option value="<?php echo $fila['id_fabricante']; ?>"><?php echo $fila['nombre']; ?></option>
-                    <?php } ?>
-                </select>
-            </div>
-            <div>
-                <input name="id_producto" value="<?php echo $id_producto; ?>" type="hidden">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <!-- ========== End formulario ========== -->
-
-
-
+        </div>
     </main>
+
     <footer>
         <!-- place footer here -->
     </footer>

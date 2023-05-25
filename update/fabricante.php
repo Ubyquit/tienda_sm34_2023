@@ -18,31 +18,41 @@
         <!-- place navbar here -->
     </header>
     <main>
-        <!-- ========== Start FORM ========== -->
-        <?php
-            //print_r($_GET);
+        <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="card w-50">
+                <div class="card-header">
+                    Actualizar fabricante
+                </div>
+                <div class="card-body">
+                    <!-- ========== Start FORM ========== -->
+                    <?php
+                    //print_r($_GET);
+                    
+                    $id_fabricante = $_GET['id_fabricante'];
 
-            $id_fabricante = $_GET['id_fabricante'];
+                    include('../connection/connection.php');
 
-            include('../connection/connection.php');
+                    $consulta = "SELECT*FROM fabricante WHERE id_fabricante = '$id_fabricante'";
 
-            $consulta = "SELECT*FROM fabricante WHERE id_fabricante = '$id_fabricante'";
+                    $query = mysqli_query($conn, $consulta);
 
-            $query = mysqli_query($conn,$consulta);
+                    $fila = mysqli_fetch_array($query);
 
-            $fila = mysqli_fetch_array($query);
+                    ?>
 
-        ?>
-
-        <form action="actualizar_fabricante.php" method="post">
-            <div class="mb-3">
-                <label for="input_fabricante" class="form-label">Nombre fabricante</label>
-                <input name="nombre_fabricante" value="<?php echo $fila['nombre']?>" type="text" class="form-control">
+                    <form action="actualizar_fabricante.php" method="post">
+                        <div class="mb-3">
+                            <label for="input_fabricante" class="form-label">Nombre fabricante</label>
+                            <input name="nombre_fabricante" value="<?php echo $fila['nombre'] ?>" type="text"
+                                class="form-control">
+                        </div>
+                        <input type="hidden" name="id_fabricante" value="<?php echo $fila['id_fabricante'] ?>">
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                    </form>
+                    <!-- ========== End FORM ========== -->
+                </div>
             </div>
-            <input type="hidden" name="id_fabricante" value="<?php echo $fila['id_fabricante']?>">
-            <button type="submit" class="btn btn-primary">Actualizar</button>
-        </form>
-        <!-- ========== End FORM ========== -->
+        </div>
     </main>
     <footer>
         <!-- place footer here -->
