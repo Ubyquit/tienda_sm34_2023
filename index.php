@@ -24,26 +24,50 @@
   <body>
     <header>
       <!-- place navbar here -->
-      <div w3-include-html="partials/nav.html"></div>
+      <?php include('partials/nav.html') ?>
     </header>
     <main>
       <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
         <div class="text-center">
           <div class="d-flex">
-            <a href="fabricantes.php" class="image-link">
-              <h1 class="page-title">Fabricantes</h1>
-              <img src="assets/img/fabrica.png" alt="Fabricantes" class="img-link" />
-            </a>
-            <a href="productos.php" class="image-link">
-              <h1 class="page-title">Productos</h1>
-              <img src="assets/img/bot.png" alt="Productos" class="img-link" />
-            </a>
+            <div class="card mb-3 custom-card" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <a href="fabricantes.php" class="image-link">
+                    <img src="assets/img/fabrica.png" class="img-fluid rounded-start" />
+                  </a>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h2 class="card-title">Fabricantes</h2>
+                    <h1 class="card-text">10</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="card mb-3 custom-card" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <a href="productos.php" class="image-link">
+                    <img src="assets/img/bot.png" class="img-fluid rounded-start" />
+                  </a>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body d-flex flex-column justify-content-center">
+                    <h2 class="card-title">Productos</h2>
+                    <h1 class="card-text">10</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main>
     
     
+
     <footer>
       <!-- place footer here -->
     </footer>

@@ -48,7 +48,7 @@
                         <?php } ?>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Agregar</button>
             </form>
             <!-- ========== End formulario ========== -->
         </div>

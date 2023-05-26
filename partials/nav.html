@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link" id="home-link" href="index.html">Home</a>
+        <a class="nav-link" id="home-link" href="index.php">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="fabricantes-link" href="fabricantes.php">Fabricantes</a>
@@ -24,7 +24,7 @@
   var productosLink = document.getElementById('productos-link');
 
   // Comparamos el nombre del archivo actual con los nombres de las páginas y agregamos la clase "active" al enlace correspondiente
-  if (currentPage === 'index.html') {
+  if (currentPage === 'index.php') {
     homeLink.classList.add('active');
   } else if (currentPage === 'fabricantes.php') {
     fabricantesLink.classList.add('active');
