@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>🏡 Home</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -16,6 +16,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
+    <link href="css/styles.css" rel="stylesheet" />
 
     <script src="js/script.js"></script>
   </head>
@@ -26,15 +27,23 @@
       <div w3-include-html="partials/nav.html"></div>
     </header>
     <main>
-      <div class="d-grid gap-2">
-        <a class="btn btn-primary" type="button" href="fabricantes.php"
-          >Fabricantes</a
-        >
-        <a class="btn btn-primary" type="button" href="productos.php"
-          >Productos</a
-        >
+      <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+        <div class="text-center">
+          <div class="d-flex">
+            <a href="fabricantes.php" class="image-link">
+              <h1 class="page-title">Fabricantes</h1>
+              <img src="assets/img/fabrica.png" alt="Fabricantes" class="img-link" />
+            </a>
+            <a href="productos.php" class="image-link">
+              <h1 class="page-title">Productos</h1>
+              <img src="assets/img/bot.png" alt="Productos" class="img-link" />
+            </a>
+          </div>
+        </div>
       </div>
     </main>
+    
+    
     <footer>
       <!-- place footer here -->
     </footer>

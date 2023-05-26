@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>🏭 Fabricantes</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +21,7 @@
     </header>
     <main class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <!-- ========== Start FORM ========== -->
             <form action="insert/registro_fabricantes.php" method="post">
                 <div class="mb-3">
@@ -32,7 +32,7 @@
             </form>
             <!-- ========== End FORM ========== -->
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>

@@ -1,16 +1,34 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <!-- Navbar content -->
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="fabricantes.php">Fabricantes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="productos.php">Productos</a>
-        </li>
-      </ul>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" id="home-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="fabricantes-link" href="fabricantes.php">Fabricantes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="productos-link" href="productos.php">Productos</a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<script>
+  // Obtenemos el nombre del archivo actual
+  var currentPage = location.pathname.split('/').pop();
+
+  // Obtenemos los elementos de los enlaces
+  var homeLink = document.getElementById('home-link');
+  var fabricantesLink = document.getElementById('fabricantes-link');
+  var productosLink = document.getElementById('productos-link');
+
+  // Comparamos el nombre del archivo actual con los nombres de las páginas y agregamos la clase "active" al enlace correspondiente
+  if (currentPage === 'index.html') {
+    homeLink.classList.add('active');
+  } else if (currentPage === 'fabricantes.php') {
+    fabricantesLink.classList.add('active');
+  } else if (currentPage === 'productos.php') {
+    productosLink.classList.add('active');
+  }
+</script>

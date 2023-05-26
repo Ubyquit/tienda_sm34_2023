@@ -69,7 +69,8 @@ $fabricante = mysqli_fetch_array($resultado1);
                         <div>
                             <input name="id_producto" value="<?php echo $id_producto; ?>" type="hidden">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.history.back()">Cancelar</button>
                     </form>
                     <!-- ========== End formulario ========== -->
                 </div>

@@ -44,10 +44,11 @@
                         <div class="mb-3">
                             <label for="input_fabricante" class="form-label">Nombre fabricante</label>
                             <input name="nombre_fabricante" value="<?php echo $fila['nombre'] ?>" type="text"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                         <input type="hidden" name="id_fabricante" value="<?php echo $fila['id_fabricante'] ?>">
                         <button type="submit" class="btn btn-primary">Actualizar</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.history.back()">Cancelar</button>
                     </form>
                     <!-- ========== End FORM ========== -->
                 </div>
