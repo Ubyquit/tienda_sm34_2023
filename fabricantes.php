@@ -65,9 +65,9 @@
                                 <?php 
 
                                 if($fila['contador'] != 0){
-                                    echo '<span class="badge text-bg-success">'.$fila['contador'].'</span>';
+                                    echo '<span class="badge rounded-pill text-bg-success">'.$fila['contador'].'</span>';
                                 }else{
-                                    echo '<span class="badge text-bg-danger">'.$fila['contador'].'</span>';
+                                    echo '<span class="badge rounded-pill text-bg-danger">'.$fila['contador'].'</span>';
                                 }
 
                                  ?>
