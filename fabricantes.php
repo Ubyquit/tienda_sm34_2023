@@ -105,7 +105,7 @@
                                                 $resultado3 = mysqli_query($conn, $consulta3);
 
                                                 while ($fila3 = mysqli_fetch_array($resultado3)) { ?>
-                                                    <li><?php echo $fila3['nombre'] ?></li>
+                                                    <li><span class="fw-bold"><?php echo $fila3['nombre'] ?></span> $<?php echo $fila3['precio'] ?></li>
                                                 <?php } ?>
                                                 <!-- ... -->
                                             </ul>
