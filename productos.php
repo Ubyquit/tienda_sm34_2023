@@ -95,7 +95,7 @@
                             </td>
                             <td>
                                 <a href="update/producto.php?id_producto=<?php echo $fila['id_producto'] ?>">
-                                    <i class="bi bi-pencil-square text-warning" style="font-size: 1.5rem;"></i>
+                                    <i class="bi bi-arrow-clockwise text-warning" style="font-size: 1.5rem;"></i>
                                 </a>
                             </td>
                         </tr>

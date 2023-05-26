@@ -80,7 +80,7 @@
                             </td>
                             <td>
                                 <a href="update/fabricante.php?id_fabricante=<?php echo $fila['id_fabricante'] ?>">
-                                    <i class="bi bi-pencil-square text-warning" style="font-size: 1.5rem;"></i>
+                                    <i class="bi bi-arrow-clockwise text-warning" style="font-size: 1.5rem;"></i>
                                 </a>
                             </td>
                         </tr>
