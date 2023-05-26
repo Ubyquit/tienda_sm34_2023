@@ -18,15 +18,15 @@
     <header>
         <!-- place navbar here -->
         <?php include('partials/nav.html') ?>
-
     </header>
+    <br>
     <main class="container">
     <div class="row">
         <div class="col-md-4">
             <!-- ========== Start formulario ========== -->
             <form action="insert/registro_productos.php" method="post">
                 <div class="mb-3">
-                    <label class="form-label">Producto</label>
+                    <label class="form-label">Nombre producto</label>
                     <input name="nombre_producto" type="text" class="form-control" required>
                 </div>
                 <div class="mb-3">

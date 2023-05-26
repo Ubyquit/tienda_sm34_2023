@@ -19,6 +19,7 @@
         <!-- place navbar here -->
         <?php include('partials/nav.html') ?>
     </header>
+    <br>
     <main class="container">
     <div class="row">
         <div class="col-md-4">
